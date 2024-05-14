@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/css2?family=Actor&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <ion-content [fullscreen]="true">
+    <div id="title-login">
+        <h1>Welcome Back</h1>
+    </div>
+    <div id="user-input">
+      <ion-item lines="none" class="transparent">
+        <label position="floating">Username: </label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <div id= "spacer"> hi </div>
+      <ion-item lines="none" class="transparent">
+        <label position="floating">Password: </label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <div id="button-align">
+        <ion-button (click)="login()">Login</ion-button>
+      </div>
+      <div id="sign-up-align">
+        <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+      </div>
+    </div>
+  </ion-content>
