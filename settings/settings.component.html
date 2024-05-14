@@ -1,0 +1,42 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Sleep Tracker Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<link href="https://fonts.googleapis.com/css2?family=Actor&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h2>Settings</h2>
+  </div>
+  <div id="button-container">
+    <ion-button (click)="openChangePasswordModal()">Change Password</ion-button>
+    <ion-button (click)="signOut()">Sign Out</ion-button>
+    <ion-button (click)="delete()" class="delete-button" style="color: #FF5959;">Delete Account</ion-button>
+  </div>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home" (click)="goToHome()">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="logSleep" (click)="logSleep()">
+    <ion-icon aria-hidden="true" name="bed"></ion-icon>
+    <ion-label>log sleep</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="data" (click)="viewData()">
+    <ion-icon aria-hidden="true" name="stats-chart"></ion-icon>
+    <ion-label>view data</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="settings" (click)="goToSettings()">
+    <ion-icon aria-hidden="true" name="settings"></ion-icon>
+    <ion-label>settings</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
