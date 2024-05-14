@@ -1,0 +1,130 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.custom-width-button {
+  width: 200px;
+}
+#chart-div{
+  margin-left: 5%;
+  margin-right: 5%;
+  //background-color: #4B4B4B;
+  border-radius: 15px;
+}
+
+#divider-msg {
+  color: white;
+  font-family: 'actor', sans-serif;
+  margin-left: 10%;
+  padding-top: 5%;
+}
+
+ion-content {
+  --background: none;
+  background-image: url(night.png);
+}
+
+#home-header-text{
+  padding-top: 10%;
+  color: white;
+  text-align: left;
+  margin-left: 5%;
+  padding-bottom: 10%;
+}
+
+#home-body {
+  background-color: #2E2E2E;
+  height: 65%;
+}
+
+#home-body-text {
+  padding-top: 2%;
+  color: white;
+  //margin-left: 5%;
+}
+
+#ion-card-log {
+  ion-card {
+    ion-card-title {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    --background: none;
+    background-image: url(log_sleep_banner.png);
+    background-position: left;
+  }
+}
+
+#range-div {
+  border-radius: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #4B4B4B;
+  align-items: center;
+
+  ion-button {
+    color: white;
+  }
+
+  ion-range {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+#range-div ion-icon {
+  color: white;
+}
+
+#range-button-div{
+  padding-top: 5%;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #4B4B4B;
+  text-align: center;
+
+  ion-button {
+    --background: transparent;
+    margin: auto;
+  }
+}
+
+#view-sleep {
+  color: white;
+  text-align: center;
+  ion-card {
+    text-align: center;
+    background-color: #4B4B4B;
+  }
+}

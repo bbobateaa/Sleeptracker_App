@@ -1,0 +1,69 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Sleep Tracker 
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <div id="home-header-text">
+    <h2>Good Evening</h2>
+    <h5>How are you feeling?</h5>
+    <div class="timer">
+      <h2>Currently {{ currentTime }}</h2>
+    </div>
+  </div>
+
+  <div id="home-body">
+    <div id="home-body-text">
+      <div id="ion-card-log">
+        <ion-card (click)="logSleep()">
+            <ion-card-header>
+              <ion-card-title style="color: white;">Good Night, {{this.username}}</ion-card-title>
+              <ion-card-subtitle></ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content style="color: white;">
+              log tonight's sleep <ion-icon name="chevron-forward-outline" color="white"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <div id="range-button-div">
+      <div id="range-div">
+        <ion-range aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="1" [max]="7" [(ngModel)]="loggedMood">
+          <ion-icon slot="start" name="happy-outline" class="custom-ion-icon" ></ion-icon>
+          <ion-icon slot="end" name="sad-outline" class="custom-ion-icon"></ion-icon>
+        </ion-range>
+      </div>
+      <ion-button (click)="saveLoggedMood()" class="custom-ion-button">Log Mood</ion-button>
+    </div>
+    <div id="view-sleep">
+      <ion-card (click)="viewData()">
+        <ion-card-content style="color: white;">View Sleep Data</ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home" (click)="goToHome()">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="logSleep" (click)="logSleep()">
+    <ion-icon aria-hidden="true" name="bed"></ion-icon>
+    <ion-label>log sleep</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="data" (click)="viewData()">
+    <ion-icon aria-hidden="true" name="stats-chart"></ion-icon>
+    <ion-label>view data</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="settings" (click)="goToSettings()">
+    <ion-icon aria-hidden="true" name="settings"></ion-icon>
+    <ion-label>settings</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
